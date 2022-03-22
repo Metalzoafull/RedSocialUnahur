@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const Perfil = require('../models/perfil');
 
-const bodyParser=require('body-parser');
+//const bodyParser=require('body-parser');
 
-router.use(bodyParser.urlencoded({extend:true}))
-router.use(bodyParser.json())
+//router.use(bodyParser.urlencoded({extend:true}))
+//router.use(bodyParser.json())
   
 // router.get('/account/getAll', async (req, res) => {
 //   const perfiles = await Perfil.find({user: req.user.id});

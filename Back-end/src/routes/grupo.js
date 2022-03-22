@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const Grupo = require('../models/grupo');
-const bodyParser=require('body-parser');
+//const bodyParser=require('body-parser');
 
-router.use(bodyParser.urlencoded({extend:true}))
-router.use(bodyParser.json())
+//router.use(bodyParser.urlencoded({extend:true}))
+//router.use(bodyParser.json())
 
 router.post('/grupo/add', async (req, res, next) => {
     const grupos = new Grupo(req.body);
