@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Perfil = require('../models/crearPerfil');
-const Materia = require('../models/Materia');
+
 const bodyParser=require('body-parser');
 const path = require('path');
 const { unlink } = require('fs-extra');
@@ -23,7 +23,7 @@ router.get('/micuenta', async (req, res, next) => {
     perfiles
   });
 });
-
+/*
 router.get('/micuenta/:id', async (req, res, next) => {
   const perfiles = await Perfil.findById(req.params.id);
   console.log(perfiles)
@@ -31,7 +31,7 @@ router.get('/micuenta/:id', async (req, res, next) => {
 });
 
 
-
+*/
 
 
 router.post('/add', async (req, res, next) => {
@@ -41,9 +41,6 @@ router.post('/add', async (req, res, next) => {
   perfiles.carrera=req.body.carrera
   perfiles.cursandoActualmente=req.body.cursandoActualmente
   perfiles.preparandoFinales=req.body.preparandoFinales
-  
-  
- 
   console.log('POST /perfil/add')
   console.log(req.body)
   await perfiles.save();
